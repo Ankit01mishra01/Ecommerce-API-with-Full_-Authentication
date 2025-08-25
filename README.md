@@ -1,37 +1,72 @@
-#Ecommerce API with Full Authentication
+🛒 Ecommerce API with Full Authentication
 
-A full-featured RESTful e-commerce backend built with Node.js, Express, MongoDB, and JWT authentication.
+A fully functional Ecommerce REST API built with Node.js, Express, MongoDB, and JWT Authentication.
+This project demonstrates secure authentication, product management, and cart handling, making it a strong showcase of backend development skills for real-world applications.
 
-Features
+🚀 Features
 
-User Authentication: Secure registration and login using JWTs, plus protected routes.
+🔐 User Authentication (Register, Login, JWT-based Auth, Middleware protection)
 
-Product Management: Create, read, update, and delete products.
+👤 User Management (profile, role-based access)
 
-Cart Functionality: Add items to cart, update quantity, get user’s cart, and remove products.
+📦 Product Management (Add, Update, Delete, Get All, Get by ID)
 
-User Roles/Functions: Publicly accessible product listing; authenticated access for cart features.
+🛍️ Shopping Cart (Add to Cart, Remove from Cart, Get User Cart)
 
-MongoDB Integration: Data is managed via Mongoose models.
+✅ Secure Endpoints (Protected routes with isAuthenticated middleware)
 
-Error Handling: Graceful responses on validation errors or failures.
+🌐 REST API Architecture with clean routes & controllers
 
-Tech Stack
-Layer	Technologies
-Backend	Node.js & Express
-Database	MongoDB via Mongoose ODM
-Authentication	JWT (JSON Web Tokens)
-Middleware	express.json(), authentication guard
-Dev Tools	nodemon, dotenv
-Requirements
+🛠️ Tech Stack
 
-Node.js (v16+)
+Backend: Node.js, Express.js
 
-MongoDB instance or MongoDB Atlas account
+Database: MongoDB with Mongoose
 
-Setup & Installation
+Authentication: JWT (JSON Web Tokens) & Bcrypt
 
-Clone the repository
+Middleware: Custom authentication & error handling
+
+Tools: Nodemon, dotenv
+
+📂 Project Structure
+Ecommerce-API-with-Full_-Authentication/
+│-- controllers/     # Business logic (user, product, cart)
+│-- middlewares/     # Authentication & custom middleware
+│-- models/          # Mongoose schemas
+│-- routes/          # API endpoints
+│-- server.js        # Entry point
+│-- .env             # Environment variables
+│-- package.json
+
+🔑 API Endpoints
+👤 User
+
+POST /api/user/register → Register new user
+
+POST /api/user/login → Login user & get token
+
+📦 Product
+
+GET /api/products/all → Get all products
+
+GET /api/products/:id → Get product by ID
+
+PUT /api/products/:id → Update product by ID
+
+🛍️ Cart
+
+POST /api/cart/add → Add product to cart
+
+GET /api/cart/items → Get cart items
+
+GET /api/cart/user → Get user’s cart
+
+DELETE /api/cart/remove/:productId → Remove product from cart
+
+⚙️ Setup Instructions
+
+Clone the repo
 
 git clone https://github.com/Ankit01mishra01/Ecommerce-API-with-Full_-Authentication.git
 cd Ecommerce-API-with-Full_-Authentication
@@ -42,38 +77,32 @@ Install dependencies
 npm install
 
 
-Configure environment variables
+Configure environment → Create .env file
 
-Create a .env file at the project root
-
-Example .env:
-
-MONGO_URI=your-mongodb-connection-string
-JWT_SECRET=your-secure-jwt-secret
-PORT=3000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
 
 
-Start the server
+Run server
 
 npm run dev
 
+📸 Demo (Optional: Add Postman screenshots / GIFs)
+💡 Learning Highlights
 
-Your API will be running at http://localhost:3000
+Implemented JWT authentication & secure routes
 
-API Endpoints
-Authentication Routes
-Method	Endpoint	Description
-POST	/api/user/register	Register a new user
-POST	/api/user/login	Authenticate user and issue JWT
-Product Routes
-Method	Endpoint	Description
-POST	/api/product/add	Create a new product
-GET	/api/product/	Get all products
-GET	/api/product/:id	Get product by ID
-PUT	/api/product/:id	Update product by ID
-Cart Routes (Authenticated)
-Method	Endpoint	Description
-POST	/api/cart/add	Add an item to the cart
-GET	/api/cart/items	Retrieve cart items
-GET	/api/cart/user	Get current user's cart
-DELETE	/api/cart/remove/:productId	Remove a product from cart
+Built scalable REST API structure with controllers & middlewares
+
+Designed MongoDB schemas for users, products & cart
+
+Hands-on experience with real-world ecommerce workflows
+
+👨‍💻 Author
+
+Ankit Mishra
+
+🌐 GitHub
+
+💼 Aspiring Full Stack Developer | Backend Enthusiast
